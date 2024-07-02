@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background-color: #1B244A;
+}
+
+@font-face
+{
+    src: url("/CursedTimerUlil-Aznm.ttf");
+    font-family: cursedtimer;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+p
+{
+  background-color:  #080001;
+  font-family: cursedtimer;
+  font-size: 90px;
+  font-weight: 400;
+  text-align: center;
+  color: #F94F6D;
+  border-radius: 5px;
+  width: 170px;
+  padding: 30px 10px;
+  margin: 0;
+  
+}
+
+h3
+{
+    font-family : Verdana;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 35.89px;
+    color: #EEEEEE;
+    margin: 50% 0 15% 0;
+}
+
+.score
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20%;
+}
+
+.timer
+{
+  background-color:  #080001;
+  font-family: cursedtimer;
+  font-size: 90px;
+  font-weight: 400;
+  text-align: center;
+  color: #F94F6D;
+  border-radius: 5px;
+  width: 270px;
+  height: 100px;
+  padding: 30px 10px;
+  margin: 0; 
+}
+#restart
+{
+   width: 20%;
+   margin: 30px auto;
+   display: block;
+}
+
+#starttime
+{
+    width: 20%;
+    margin: 30px auto;
+    display: block;
+}
+
+button
+{
+    color : #9AABD8;
+    border: 3px solid #9AABD8;
+    background-color: inherit;
+    width: 45px;
+    height: 45px;
+    font-family: cursedtimer;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27.81px;
+    text-align: center;
+    border-radius: 10px;
+    
+  
+
+}
+
+button:hover
+{
+    background-color: white;
+}
