@@ -10,35 +10,53 @@ guestScore.innerText = 0
 
 
 function homeIncrementOne() {
-    scoreHome += 1
-    homeScore.innerText = scoreHome
+    if(scoreHome != 999 && scoreHome < 999)
+    {
+          scoreHome += 1
+          homeScore.innerText = scoreHome
+    }
 }
 
 
 function homeIncrementTwo() {
+  if(scoreHome != 999 && scoreHome < 999)
+  {
     scoreHome += 2
     homeScore.innerText = scoreHome
+  }
 }
 
 function homeIncrementThree() {
+  if(scoreHome != 999 && scoreHome < 999)
+  {
     scoreHome += 3
     homeScore.innerText = scoreHome
+  }
 }
 
 function guestIncrementOne() {
+  if(scoreGuest != 999 && scoreGuest < 999)
+  {
     scoreGuest += 1
     guestScore.innerText = scoreGuest
+  }
 }
 
 
 function guestIncrementTwo() {
+  if(scoreGuest != 999 && scoreGuest < 999)
+  {
     scoreGuest += 2
     guestScore.innerText = scoreGuest
+  }
 }
 
 function guestIncrementThree() {
+  if(scoreGuest != 999 && scoreGuest < 999)
+  {
     scoreGuest += 3
     guestScore.innerText = scoreGuest
+  }
 }
 
 function restartGame()
@@ -48,6 +66,7 @@ function restartGame()
     guestScore.innerText = scoreGuest
     homeScore.innerText = scoreHome
     countdown = 120;
+    clearInterval(timer);
 }
     // my JS code 
     let countdown = 120; // 2 minutes
