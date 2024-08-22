@@ -64,6 +64,7 @@ function restartGame()
     scoreGuest = 0;
     scoreHome = 0;
     currentQuarter =0;
+    updateQuarterDisplay() 
     guestScore.innerText = scoreGuest
     homeScore.innerText = scoreHome
     pauseTimer();
