@@ -5,9 +5,7 @@ A sleek and interactive digital scoreboard for tracking game scores and time in 
 
 ## Features:
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+# TRY IT OUT: https://main--scoreboardmamba.netlify.app
 
 - Real-Time Score Tracking: Easily update scores for home and away teams with intuitive buttons (+1, +2, +3).
 - Countdown Timer: Start, pause, and reset a game timer with user-friendly controls.
