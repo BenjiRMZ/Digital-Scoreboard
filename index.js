@@ -65,8 +65,9 @@ function restartGame()
     scoreHome = 0;
     guestScore.innerText = scoreGuest
     homeScore.innerText = scoreHome
+    pauseTimer();
     countdown = 120;
-    clearInterval(timer);
+    updateCountDown();
 }
 
 
@@ -87,7 +88,7 @@ function restartGame()
                 }
                 else 
                 {
-                    pauseTimer();
+                  pauseTimer();
                     alert("Quarter Ended!");
                 }
             }, 1000);
@@ -95,11 +96,6 @@ function restartGame()
         
     }
 
-function pauseTimer()
-{
-    clearInterval(timerInterval);
-    timerInterval = null;
-}
 
 function resetTimer()
 {
@@ -108,18 +104,22 @@ function resetTimer()
     updateCountDown();
 }
 
+function pauseTimer() 
+{
+  clearInterval(timerInterval);
+  timerInterval = null;
+}
+
+
 
     function updateCountDown()
     {
       let minutes = Math.floor(countdown/60)
       let seconds = countdown % 60;
     
-      if(seconds < 10)
-      {
-        seconds = "0" + seconds;
-      }
     
-      document.getElementById("timer").textContent = minutes + ":" + seconds;
+      //document.getElementById("timer").textContent = minutes + ":" + seconds;
+      document.getElementById('timer').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
 
 
@@ -127,13 +127,14 @@ function nextQuarter() {
     if (currentQuarter < 4) {
         currentQuarter++;
         resetTimer();
-         updateCountDown();
+        updateQuarterDisplay();
     } else {
         alert("Game Over!");
     }
 }
 
-function updateQuarterDisplay() {
+function updateQuarterDisplay() 
+{
     document.getElementById('quarter').textContent = currentQuarter;
 }
 

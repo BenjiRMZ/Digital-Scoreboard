@@ -17,7 +17,7 @@ p
 {
   background-color:  #080001;
   font-family: cursedtimer;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 400;
   text-align: center;
   color: #F94F6D;
@@ -26,6 +26,18 @@ p
   padding: 30px 10px;
   margin: 0;
   
+}
+
+h1
+{
+    font-family: cursedtimer;
+    font-weight: 700;
+    text-align: center;
+    font-size: 60px;
+    width: 20%;
+    margin: 30px auto;
+    display: block;
+    color: #F94F6D;
 }
 
 h3
@@ -74,6 +86,22 @@ h3
     display: block;
 }
 
+#pausetime
+{
+    width: 20%;
+    margin: 30px auto;
+    display: block;
+}
+
+#nextquarter
+{
+    width: 20%;
+    margin: 30px auto;
+    display: block;
+    background-color: #F94F6D;
+    color: #080001;
+}
+
 button
 {
     color : #9AABD8;
@@ -95,4 +123,11 @@ button
 button:hover
 {
     background-color: white;
+}
+
+.quarter-display {
+    display: block;
+    margin: 10px auto; /* Reduced margin */
+    justify-content: center;
+    align-items: baseline;
 }
