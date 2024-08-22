@@ -68,9 +68,47 @@ function restartGame()
     countdown = 120;
     clearInterval(timer);
 }
-    // my JS code 
+
+
     let countdown = 120; // 2 minutes
-                    
+    let timerInterval;
+    let currentQuarter = 1;
+
+    function startCountdown()
+    {
+        if(!timerInterval)
+        {
+            timerInterval = setInterval(() => 
+            {
+                if(countdown > 0)
+                {
+                    countdown--;
+                    updateCountDown();
+                }
+                else 
+                {
+                    pauseTimer();
+                    alert("Quarter Ended!");
+                }
+            }, 1000);
+        }
+        
+    }
+
+function pauseTimer()
+{
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
+function resetTimer()
+{
+    pauseTimer();
+    countdown = 120;
+    updateCountDown();
+}
+
+
     function updateCountDown()
     {
       let minutes = Math.floor(countdown/60)
@@ -82,16 +120,20 @@ function restartGame()
       }
     
       document.getElementById("timer").textContent = minutes + ":" + seconds;
-      countdown--;
-      if(countdown < 0)
-      {
-        clearInterval(timer);
-        document.getElementById("timer").textContent = "Over!";
-      }
     }
-    
-    
-    function startCountdown()
-    {
-      timer = setInterval(updateCountDown, 1000);
+
+
+function nextQuarter() {
+    if (currentQuarter < 4) {
+        currentQuarter++;
+        resetTimer();
+         updateCountDown();
+    } else {
+        alert("Game Over!");
     }
+}
+
+function updateQuarterDisplay() {
+    document.getElementById('quarter').textContent = currentQuarter;
+}
+
